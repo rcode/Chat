@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Chat"
+include ':app'
+include ':domain'
+include ':core:base'
+include ':core:ui'
+include ':data:main'
+include ':data:local'
+include ':data:remote'
+include ':feature:registration'
+include ':feature:chat'

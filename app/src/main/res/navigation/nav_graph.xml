@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/chatListFragment">
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="dev.rcode.android.feature.registration.RegistrationFragment"
+        android:label="RegistrationFragment" />
+
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="dev.rcode.android.feature.chat.ChatListFragment"
+        android:label="ChatListFragment" >
+        <action
+            android:id="@+id/action_chatListFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_chatListFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="dev.rcode.android.feature.chat.ChatFragment"
+        android:label="ChatFragment" >
+        <argument
+            android:name="chatGroup"
+            app:argType="string" />
+    </fragment>
+</navigation>
