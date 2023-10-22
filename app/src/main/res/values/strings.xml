@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Chat</string>
+    <string name="arg_chat_group">chat_group</string>
+</resources>
